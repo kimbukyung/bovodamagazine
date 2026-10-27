@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Magazine — BOVODA Magazine</title>
+  <meta name="description" content="BOVODA 매거진 시리즈 — SHAPE, CURVE, PATTERN, SCENT. 2026년 네 번의 이야기.">
+  <link rel="preconnect" href="https://use.typekit.net" crossorigin>
+  <link rel="stylesheet" href="https://use.typekit.net/qnz6yde.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Menu (Figma: menu 160:230) -->
+  <header class="menu" id="menu">
+    <nav class="menu__nav" id="menuNav" aria-label="주 메뉴">
+      <a class="menu__link" href="about.html">ABOUT</a>
+      <a class="menu__link" href="magazine.html" aria-current="page">MAGAZINE</a>
+      <a class="menu__link" href="campaign.html">CAMPAIGN</a>
+    </nav>
+    <a class="menu__logo" href="index.html" aria-label="BOVODA 홈">
+      <img src="assets/img/bovoda-logo.svg" alt="bovoda — body visions of diverse aesthetics" width="163" height="50">
+    </a>
+    <a class="menu__link menu__cart" href="cart.html">CART</a>
+    <button class="menu__toggle" id="menuToggle" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="menuNav">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <!-- Magazine (Figma: magazine page 160:280) -->
+  <main class="magazine">
+    <section class="magazine__issue">
+      <div class="page-title">
+        <h1 class="page-title__text">MAGAZINE</h1>
+      </div>
+
+      <div class="mag-head">
+        <h2 class="mag-head__title">Shape</h2>
+        <p class="mag-head__sub">BOVODA MAGAZINE ISSUE No.001</p>
+        <p class="mag-head__desc">보보다 매거진의 첫 번째 호는 'SHAPE'라는 이야기로 문을 엽니다. 6가지 얼굴형을 각각의 젤리로 <br>형상화하여, 저마다의 얼굴이 지닌 고유하고 매력적인 '맛'을 이야기합니다.</p>
+      </div>
+
+      <div class="mag-film">
+        <video class="mag-film__video" id="filmVideo" src="assets/video/magazine.mp4" poster="assets/img/magazine-poster.jpg" muted loop playsinline preload="metadata"></video>
+      </div>
+    </section>
+
+    <section class="magazine__series">
+      <div class="mag-head mag-head--series">
+        <h2 class="mag-head__title">2026</h2>
+        <p class="mag-head__sub">MAGAZINE SERIES</p>
+      </div>
+
+      <ul class="covers">
+        <li class="cover cover--1">
+          <a href="#">
+            <div class="cover__head"><strong>SHAPE</strong><span>ISSUE No.001 Spring 2026</span></div>
+            <div class="cover__media">
+              <img class="cover__img" src="assets/img/cover1.png" alt="ISSUE No.001 SHAPE 표지 목업" loading="lazy">
+              <div class="cover__hover" aria-hidden="true"><img src="assets/img/cover1-hover.png" alt="" loading="lazy"></div>
+            </div>
+          </a>
+        </li>
+        <li class="cover cover--2">
+          <a href="#">
+            <div class="cover__head"><strong>CURVE</strong><span>ISSUE No.002 Summer 2026</span></div>
+            <div class="cover__media">
+              <img class="cover__img" src="assets/img/cover2.png" alt="ISSUE No.002 CURVE 표지 목업" loading="lazy">
+              <div class="cover__hover" aria-hidden="true"><img src="assets/img/cover2-hover.png" alt="" loading="lazy"></div>
+            </div>
+          </a>
+        </li>
+        <li class="cover cover--3">
+          <a href="#">
+            <div class="cover__head"><strong>PATTERN</strong><span>ISSUE No.003 Autumn 2026</span></div>
+            <div class="cover__media">
+              <img class="cover__img" src="assets/img/cover3.png" alt="ISSUE No.003 PATTERN 표지 목업" loading="lazy">
+              <div class="cover__hover" aria-hidden="true"><img src="assets/img/cover3-hover.png" alt="" loading="lazy"></div>
+            </div>
+          </a>
+        </li>
+        <li class="cover cover--4">
+          <a href="#">
+            <div class="cover__head"><strong>SCENT</strong><span>ISSUE No.004 Winter 2026</span></div>
+            <div class="cover__media">
+              <img class="cover__img" src="assets/img/cover4.png" alt="ISSUE No.004 SCENT 표지 목업" loading="lazy">
+              <div class="cover__hover" aria-hidden="true"><img src="assets/img/cover4-hover.png" alt="" loading="lazy"></div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Footer (Figma: footer 160:133) -->
+  <footer class="footer">
+    <img class="footer__logo" src="assets/img/bovoda-logo.svg" alt="bovoda" width="163" height="50" loading="lazy">
+    <hr class="footer__line">
+    <ul class="footer__info">
+      <li><a href="https://www.instagram.com/bovoda.magazine" target="_blank" rel="noopener">Instagram:@bovoda.magazine</a></li>
+      <li><a href="mailto:bovoda@gmail.com">Email:bovoda@gmail.com</a></li>
+      <li>Location:Busan, South Korea</li>
+      <li>Website:www.bovodamagazine.com</li>
+    </ul>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

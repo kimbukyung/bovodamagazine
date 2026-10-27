@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Join the Campaign — BOVODA Magazine</title>
+  <meta name="description" content="BOVODA Lovely Complex 캠페인에 나의 이야기를 등록해주세요.">
+  <link rel="preconnect" href="https://use.typekit.net" crossorigin>
+  <link rel="stylesheet" href="https://use.typekit.net/qnz6yde.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Menu (Figma: menu 160:230) -->
+  <header class="menu" id="menu">
+    <nav class="menu__nav" id="menuNav" aria-label="주 메뉴">
+      <a class="menu__link" href="about.html">ABOUT</a>
+      <a class="menu__link" href="magazine.html">MAGAZINE</a>
+      <a class="menu__link" href="campaign.html" aria-current="page">CAMPAIGN</a>
+    </nav>
+    <a class="menu__logo" href="index.html" aria-label="BOVODA 홈">
+      <img src="assets/img/bovoda-logo.svg" alt="bovoda — body visions of diverse aesthetics" width="163" height="50">
+    </a>
+    <a class="menu__link menu__cart" href="cart.html">CART</a>
+    <button class="menu__toggle" id="menuToggle" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="menuNav">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <!-- Campaign: join form (Figma: Frame 639 160:543) -->
+  <main class="join">
+    <div class="page-title">
+      <h1 class="page-title__text">Join the Campaign</h1>
+    </div>
+
+    <form class="join__form" id="joinForm" novalidate>
+      <label class="upload" id="upload">
+        <input class="upload__input" id="uploadInput" type="file" name="image" accept="image/jpeg,image/png">
+        <span class="upload__empty">
+          <svg class="upload__mark" viewBox="0 0 146 394" width="44" height="119" aria-hidden="true" fill="currentColor">
+            <path d="M71.941 0.572988C32.2295 0.572988 0 32.6604 0 72.1966C0 99.1271 14.9637 122.62 36.8338 134.652C44.3156 138.663 52.9486 141.528 62.157 143.247V124.912C36.8338 120.328 17.8414 98.5541 17.8414 72.1966C17.8414 42.4012 42.0135 18.3356 71.941 18.3356C101.868 18.3356 126.041 42.4012 126.041 72.1966C126.041 98.5541 106.473 120.901 80.5739 124.912V142.674C89.7823 141.528 98.9908 138.663 106.473 134.079C128.343 122.047 143.306 98.5541 143.306 71.6236C143.306 32.0874 111.077 0 71.3654 0"/>
+            <path d="M62.7312 251.542V268.159C53.5228 267.013 44.8899 264.148 37.408 260.137C15.5379 248.104 0.574219 224.612 0.574219 197.681C0.574219 170.751 15.5379 147.258 37.408 135.225C44.8899 130.642 53.5228 127.777 62.7312 126.631V144.966C37.408 149.55 18.4156 171.324 18.4156 197.681C18.4156 224.039 37.408 245.812 62.7312 250.396V251.542ZM106.471 134.652C98.4139 130.069 89.781 127.204 80.5726 126.058V143.82C105.896 147.831 126.039 170.178 126.039 196.535C126.039 222.893 106.471 245.239 80.5726 249.25V267.013C89.781 265.867 98.9895 263.002 106.471 258.418C128.341 246.385 143.305 222.893 143.305 195.962C143.305 169.032 128.341 145.539 106.471 133.506"/>
+            <path d="M143.883 322.02V259.564H126.042V275.035C120.862 268.732 113.956 263.575 107.049 259.564C98.992 254.98 90.3591 252.115 81.1507 250.969V268.732C106.474 272.743 126.617 295.09 126.617 321.447C126.617 351.243 102.445 375.308 72.5178 375.308C42.5903 375.308 18.9937 351.243 18.9937 321.447C18.9937 295.09 37.9861 273.316 63.3093 268.732V250.396C54.1009 251.542 45.468 254.407 37.9861 258.991C16.1161 271.024 1.15234 294.517 1.15234 321.447C1.15234 360.983 33.3819 393.071 73.0933 393.071C94.3878 393.071 113.956 383.903 127.193 369.005V384.476H145.034V322.02H143.883Z"/>
+          </svg>
+          <span class="upload__hint">클릭하여 이미지를 업로드하세요<br>JPG, PNG / 최대 10MB</span>
+        </span>
+        <img class="upload__preview" id="uploadPreview" alt="업로드한 이미지 미리보기" hidden>
+        <span class="upload__change" id="uploadChange" hidden>다른 이미지로 바꾸기</span>
+      </label>
+
+      <div class="join__fields">
+        <p class="join__banner">이름과 이야기를 함께 등록해주세요.</p>
+
+        <label class="field">
+          <span class="field__label">닉네임</span>
+          <input class="field__input" type="text" name="nickname" maxlength="30" required autocomplete="nickname">
+        </label>
+
+        <label class="field">
+          <span class="field__label">나의 콤플렉스 이야기</span>
+          <textarea class="field__input field__input--area" name="story" maxlength="300" required placeholder="예전엔 싫었지만, 지금은 나만의 매력이라고 생각하는 얼굴 특징을 들려주세요."></textarea>
+        </label>
+
+        <label class="consent">
+          <input class="consent__input" type="checkbox" name="consent" required>
+          <span class="consent__box" aria-hidden="true"></span>
+          <span class="consent__text">개인정보 수집 및 이용에 동의합니다. (필수)</span>
+        </label>
+
+        <p class="join__error" id="joinError" role="alert"></p>
+        <button class="join__submit" type="submit">이야기 등록하기</button>
+      </div>
+
+      <div class="join__done" id="joinDone" hidden>
+        <p class="join__done-title">이야기가 등록되었어요!</p>
+        <p class="join__done-text">소중한 이야기를 나눠주셔서 감사합니다. 확인 후 캠페인 페이지에 소개될 예정이에요.</p>
+        <a class="join__submit join__submit--link" href="campaign.html">다른 이야기 보러 가기</a>
+      </div>
+    </form>
+  </main>
+
+  <!-- Footer (Figma: footer 160:133) -->
+  <footer class="footer">
+    <img class="footer__logo" src="assets/img/bovoda-logo.svg" alt="bovoda" width="163" height="50" loading="lazy">
+    <hr class="footer__line">
+    <ul class="footer__info">
+      <li><a href="https://www.instagram.com/bovoda.magazine" target="_blank" rel="noopener">Instagram:@bovoda.magazine</a></li>
+      <li><a href="mailto:bovoda@gmail.com">Email:bovoda@gmail.com</a></li>
+      <li>Location:Busan, South Korea</li>
+      <li>Website:www.bovodamagazine.com</li>
+    </ul>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
