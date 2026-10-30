@@ -53,7 +53,7 @@
 
 /* ---------- Tokens ---------- */
 :root {
-  --u: calc(min(100vw, 1920px) / 1920);   /* 1 design px */
+  --u: calc(var(--vw, 100vw) / 1920);    /* 1 design px — scales with the window at every width (--vw = width without scrollbar, set in script.js) */
   --p: var(--u);                          /* 1 design px inside split panels */
 
   --white: #ffffff;
@@ -98,7 +98,12 @@ img, video, svg { display: block; max-width: 100%; }
 a { color: inherit; text-decoration: none; }
 h1, h2, p, ul { margin: 0; padding: 0; }
 ul { list-style: none; }
+html { background: var(--white); }  /* overscroll / bounce area stays white instead of the browser's grey */
 body.is-intro { overflow: hidden; }
+/* keep the footer at the bottom of the window on short pages */
+body { min-height: 100vh; display: flex; flex-direction: column; }
+body > main { flex: 1 0 auto; }
+body > header, body > footer { flex: none; }
 
 /* ---------- Intro ---------- */
 .intro {
